@@ -1,13 +1,180 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
+  position: relative;
+  overflow-x: hidden;
+}
+body,
+html {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+  padding: 0;
+}
+.btn {
+  background: linear-gradient(
+    92.23deg,
+    #ff56f6 21.43%,
+    #b936ee 50.63%,
+    #3bace2 100%,
+    #406aff 117.04%
+  );
+  box-shadow: 0px 4.42184px 107.23px rgba(255, 86, 246, 0.51);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.btn:hover {
+  background: linear-gradient(
+    92.23deg,
+    #406aff 21.43%,
+    #3bace2 50.63%,
+    #b936ee 100%,
+    #ff56f6 117.04%
+  );
+}
+
+.gradient,
+.active {
+  background: linear-gradient(
+    92.23deg,
+    #406aff 21.43%,
+    #3bace2 50.63%,
+    #b936ee 100%,
+    #ff56f6 117.04%
+  );
+}
+/* Add this CSS to your stylesheet or component */
+.icon-container {
+  /* Replace the colors with your desired gradient */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background: #ffffff4d;
+  transition: background 0.3s ease;
+}
+
+.icon-container:hover {
+  background: linear-gradient(
+    92.23deg,
+    #406aff 21.43%,
+    #3bace2 50.63%,
+    #b936ee 100%,
+    #ff56f6 117.04%
+  ); /* Replace with the desired hover gradient */
+}
+
+.active {
+  color: #fff;
+  padding: 1rem;
+  border-radius: 100%;
+}
+.aboutImg {
+  box-shadow: inset 0 0 0 9px #ffffff4d;
+}
+.bounce {
+  transition: all 0.3s ease-out;
+}
+
+.bounce:hover {
+  display: inline-block;
+  animation: rubberband 0.8s ease-out;
+  color: #cbbde5;
+}
+
+@keyframes rubberband {
+  0% {
+    transform: scaleX(1);
+  }
+  40% {
+    transform: scaleX(1.12) scaleY(0.75);
+  }
+  55% {
+    transform: scaleX(0.85) scaleY(1);
+  }
+  65% {
+    transform: scaleX(1.09) scaleY(0.85);
+  }
+  75% {
+    transform: scaleX(0.9) scaleY(1);
+  }
+  90% {
+    transform: scaleX(1.05) scaleY(0.95);
+  }
+  100% {
+    transform: scaleX(1) scaleY(1);
+  }
+}
+
+.bannerImg {
+  background: url(../src/assets/hi3.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  box-shadow: inset 0 0 0 9px #ffffff4d;
+  width: 400px;
+  height: 400px;
+  animation: profileAnimate 8s ease-in-out infinite 1s;
+  position: relative;
+  overflow: hidden;
+}
+.bannerImg::before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  left: -40px;
+  right: -40px;
+  bottom: -40px;
+  backdrop-filter: blur(40px);
+  z-index: -1;
+  animation: backdropAnimate 8s ease-in-out infinite 1s;
+
+  background: linear-gradient(
+    45deg,
+    #406aff 21.43%,
+    #3bace2 50.63%,
+    #b936ee 100%,
+    #ff56f6 117.04%
+  );
+}
+
+@keyframes profileAnimate {
+  0% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+  }
+  100% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+}
+
+@keyframes backdropAnimate {
+  0% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+  }
+  100% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+}
+
+@layer base {
+  body {
+    @apply font-primary text-lg leading-8 text-white;
+  }
+  .h2 {
+    @apply font-primary text-[32px] mb-6 tracking-[10%] uppercase;
+  }
+  .h3 {
+    @apply font-primary font-semibold text-[26px] mb-6 leading-[46px];
+  }
+  .text-gradient {
+    @apply bg-gradient-to-r from-[#42A6E3] to-[#FF56F6] text-transparent bg-clip-text;
+  }
+  .section {
+    @apply py-8 lg:py-24 lg:h-screen flex items-center;
+  }
 }
