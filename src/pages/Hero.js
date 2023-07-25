@@ -48,7 +48,7 @@ export const Hero = () => {
                   2000,
                   "Drummer",
                   2000,
-                  "Youtuber",
+                  "Music Lover",
                   2000,
                 ]}
                 speed={50}
@@ -75,12 +75,20 @@ export const Hero = () => {
               className="flex text-[20px] gap-x-6 max-w-max mx-auto lg:mx-0"
             >
               <span className="text-lg w-10 h-10 rounded-full bg-[#ffffff4d] inline-flex justify-center items-center cursor-pointer icon-container">
-                <a href="https://www.linkedin.com/in/ayk-diaz/" target="_blank">
+                <a
+                  href="https://www.linkedin.com/in/ayk-diaz/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <FaLinkedin />
                 </a>
               </span>
               <span className="text-lg w-10 h-10 rounded-full bg-[#ffffff4d] inline-flex justify-center items-center cursor-pointer icon-container">
-                <a href="https://github.com/Ayk123" target="_blank">
+                <a
+                  href="https://github.com/Ayk123"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <FaGithub />
                 </a>
               </span>
@@ -95,7 +103,7 @@ export const Hero = () => {
                 </Link>
               </span>
               <span className="text-lg w-10 h-10 rounded-full bg-[#ffffff4d] inline-flex justify-center items-center cursor-pointer icon-container">
-                <a href="#">
+                <a href="https://github.com/Ayk123">
                   <FaIdCard />
                 </a>
               </span>

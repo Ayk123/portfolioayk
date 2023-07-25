@@ -14,6 +14,16 @@ import {
   tailwind2Icon,
   bootstrapIcon,
   postmanIcon,
+  cinezoneVanillaSc,
+  bimsSc,
+  koderestoSc,
+  newsgridSc,
+  kodeledgerSc,
+  hotelExerciseSc,
+  picfreeSc,
+  cinezoneReact,
+  tindogSc,
+  simonsc,
 } from "../assets";
 
 const introduction = {
@@ -46,7 +56,7 @@ const tools = [
   },
   {
     id: "tailwind2",
-    title: "Tailwind",
+    title: "TailwindCSS",
     icon: tailwind2Icon,
   },
   {
@@ -106,4 +116,47 @@ const tools = [
   },
 ];
 
-export { introduction, tools };
+const projectRepo = [
+  {
+    repo: "cinezone",
+    scUrl: cinezoneVanillaSc,
+  },
+  {
+    repo: "bims",
+    scUrl: bimsSc,
+  },
+  {
+    repo: "koderesto",
+    scUrl: koderestoSc,
+  },
+  {
+    repo: "newsgrid",
+    scUrl: newsgridSc,
+  },
+  {
+    repo: "kodeledger",
+    scUrl: kodeledgerSc,
+  },
+  {
+    repo: "hotelExercise",
+    scUrl: hotelExerciseSc,
+  },
+  {
+    repo: "PicFree",
+    scUrl: picfreeSc,
+  },
+  {
+    repo: "CinezoneReact",
+    scUrl: cinezoneReact,
+  },
+  {
+    repo: "Tindog-Landing-Page",
+    scUrl: tindogSc,
+  },
+  {
+    repo: "Simon-Game",
+    scUrl: simonsc,
+  },
+];
+
+export { introduction, tools, projectRepo };

@@ -5,7 +5,7 @@ export const MarqueeCards = ({ children, direction }) => {
     <Marquee
       direction={direction}
       gradient={false}
-      speed={100}
+      speed={80}
       pauseOnHover={true}
       //   play={false}
     >

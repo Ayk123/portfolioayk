@@ -14,6 +14,17 @@ import reactjsIcon from "./logo/reactjs.png";
 import tailwind2Icon from "./logo/tailwind2.png";
 import bootstrapIcon from "./logo/bootstrap.png";
 import postmanIcon from "./logo/postman.png";
+// screenshots
+import cinezoneVanillaSc from "./screenshots/cinezonevanillajs.png";
+import bimsSc from "./screenshots/bimsMini1.png";
+import koderestoSc from "./screenshots/koderesto.png";
+import newsgridSc from "./screenshots/newsgrid.png";
+import kodeledgerSc from "./screenshots/kodeledger.png";
+import hotelExerciseSc from "./screenshots/hotelExercise.png";
+import picfreeSc from "./screenshots/picfree.png";
+import cinezoneReact from "./screenshots/cinezoneReact.png";
+import tindogSc from "./screenshots/tindog.png";
+import simonsc from "./screenshots/simon.png";
 
 export {
   htmlIcon,
@@ -31,4 +42,14 @@ export {
   gitIcon,
   githubIcon,
   postmanIcon,
+  cinezoneVanillaSc,
+  bimsSc,
+  koderestoSc,
+  newsgridSc,
+  kodeledgerSc,
+  hotelExerciseSc,
+  picfreeSc,
+  cinezoneReact,
+  tindogSc,
+  simonsc,
 };
