@@ -13,6 +13,7 @@ import { introduction } from "../constants/constants";
 import { SectionTitle } from "../components/SectionTitle";
 
 export const About = () => {
+  //eslint-disable-next-line
   const [ref, inView] = useInView({
     threshold: 0.5,
   });
