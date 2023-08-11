@@ -1,16 +1,21 @@
 import React from "react";
 // icons
 import { FaGithub, FaLinkedin, FaEnvelope, FaIdCard } from "react-icons/fa";
-// type animation
-import { TypeAnimation } from "react-type-animation";
 // motion
 import { motion } from "framer-motion";
 // variants
 import { fadeIn } from "../variants";
-// Import Links
-import { Link } from "react-scroll";
+
+import { useTypewriter } from "react-simple-typewriter";
+
 export const Hero = () => {
-  const text = "Hi! I'm Ayk Diaz";
+  const text = " Ayk Diaz";
+  const [typeEffect] = useTypewriter({
+    words: ["Developer", "Drummer", "Music Lover"],
+    loop: {},
+    typeSpeed: 90,
+    deleteSpeed: 40,
+  });
   return (
     <section
       className="cursor-pointer h-screen min-h-[85vh] lg:min-h-[78vh] lg:mb-[50px] flex justify-center items-center overflow-hidden relative"
@@ -25,8 +30,9 @@ export const Hero = () => {
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: false, amount: 0.7 }}
-              className="text-[55px] mb-6 font-bold leading-[0.8] lg:text-[90px]"
+              className="text-[55px] mb-6 font-bold leading-[0.8] lg:text-[90px]  "
             >
+              <span>Hi! I'm</span>
               {text.split("").map((char, index) => {
                 if (char === " ") {
                   return " ";
@@ -42,7 +48,7 @@ export const Hero = () => {
               className="mb-6 text-[36px] lg:text-[60px] font-semibold leading-[1]"
             >
               <span className="mr-4">I am a</span>
-              <TypeAnimation
+              {/* <TypeAnimation
                 sequence={[
                   "Developer",
                   2000,
@@ -52,9 +58,13 @@ export const Hero = () => {
                   2000,
                 ]}
                 speed={50}
-                className="font-extrabold text-transparent text-[78px] bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"
+                // className="font-extrabold text-[78px] bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"
+                className="font-extrabold text-[70px]"
                 repeat={Infinity}
-              />
+              /> */}
+              <span className="font-extrabold text-[78px] bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
+                {typeEffect}
+              </span>
             </motion.div>
             <motion.p
               variants={fadeIn("up", 0.5)}
@@ -93,17 +103,19 @@ export const Hero = () => {
                 </a>
               </span>
               <span className="text-lg w-10 h-10 rounded-full bg-[#ffffff4d] inline-flex justify-center items-center cursor-pointer icon-container">
-                <Link
-                  to="contact"
-                  activeClass="active"
-                  smooth={true}
-                  spy={true}
+                <a
+                  href="mailto:diazayk11@gmail.com"
+                  target="_blank"
+                  rel="noreferrer"
                 >
                   <FaEnvelope />
-                </Link>
+                </a>
               </span>
               <span className="text-lg w-10 h-10 rounded-full bg-[#ffffff4d] inline-flex justify-center items-center cursor-pointer icon-container">
-                <a href="https://github.com/Ayk123">
+                <a
+                  href={require("../assets/files/diazAykResume.pdf")}
+                  download={"Ayk'sResume.pdf"}
+                >
                   <FaIdCard />
                 </a>
               </span>
