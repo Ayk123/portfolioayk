@@ -1,7 +1,4 @@
 import React from "react";
-// Import Icons
-// import { BiHomeAlt, BiUser } from "react-icons/bi";
-// import { BsTools, BsBriefcase, BsChatSquare } from "react-icons/bs";
 import {
   FaTools,
   FaHome,

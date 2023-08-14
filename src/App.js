@@ -8,8 +8,10 @@ import { Projects } from "./pages/Projects";
 import { Contact } from "./pages/Contact";
 import { ParticlesBg } from "./components/ParticlesBg";
 import "./App.css";
+import useTitle from "./hooks/useTitle";
 
 function App() {
+  useTitle();
   return (
     <div className="">
       <ParticlesBg />

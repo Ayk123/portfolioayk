@@ -46,9 +46,10 @@ html {
 /* Add this CSS to your stylesheet or component */
 .icon-container {
   /* Replace the colors with your desired gradient */
+
   -webkit-background-clip: text;
   background-clip: text;
-  -webkit-text-fill-color: transparent;
+  /* -webkit-text-fill-color: transparent; */
   background: #ffffff4d;
   transition: background 0.3s ease;
 }
