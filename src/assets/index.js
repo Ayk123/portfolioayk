@@ -25,6 +25,7 @@ import picfreeSc from "./screenshots/picfree.png";
 import cinezoneReact from "./screenshots/cinezoneReact.png";
 import tindogSc from "./screenshots/tindog.png";
 import simonsc from "./screenshots/simon.png";
+import portfoliosc from "./screenshots/portfolio.png";
 
 export {
   htmlIcon,
@@ -52,4 +53,5 @@ export {
   cinezoneReact,
   tindogSc,
   simonsc,
+  portfoliosc,
 };

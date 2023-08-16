@@ -106,8 +106,8 @@ export const ContactForm = () => {
               id="message"
               name="message"
               className="p-[0.5em] rounded-lg text-black font-bold text-[23px]"
-              placeholder="Enter your message..."
-              {...register("message", { required: "Message is required" })}
+              placeholder="Send me a message..."
+              {...register("message", { required: "Enter your Message" })}
             ></textarea>
             {errors.message && (
               <span className="text-red-600 font-bold flex flex-row items-center pt-1 pl-1">

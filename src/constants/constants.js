@@ -24,6 +24,7 @@ import {
   cinezoneReact,
   tindogSc,
   simonsc,
+  portfoliosc,
 } from "../assets";
 
 const introduction = {
@@ -117,6 +118,10 @@ const tools = [
 ];
 
 const projectRepo = [
+  {
+    repo: "portfolioayk",
+    scUrl: portfoliosc,
+  },
   {
     repo: "cinezone",
     scUrl: cinezoneVanillaSc,
