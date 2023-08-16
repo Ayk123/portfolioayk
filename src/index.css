@@ -138,6 +138,13 @@ html {
     #ff56f6 117.04%
   );
 }
+.error-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  color: #ff6347; /* Adjust the color as needed */
+}
 
 @keyframes profileAnimate {
   0% {
