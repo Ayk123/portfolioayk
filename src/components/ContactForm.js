@@ -1,7 +1,30 @@
 import React from "react";
 import { Typewriter } from "react-simple-typewriter";
+import emailjs from "@emailjs/browser";
+import { useRef } from "react";
 
 export const ContactForm = () => {
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+        form.current,
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          console.log("message sent");
+          e.target.reset();
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
   return (
     <div className="min-h-[550px] w-[100%] xl:w-[50%] bg-black/20 p-[20px] backdrop-blur-2xl rounded-2xl border-8 border-[#ffffff4d] relative bottom-0 mb-[100px]">
       <div>
@@ -11,7 +34,12 @@ export const ContactForm = () => {
       </div>
 
       <div className="w-full flex justify-center">
-        <form action="" className="w-[80%] h-full">
+        <form
+          action=""
+          className="w-[80%] h-full"
+          ref={form}
+          onSubmit={sendEmail}
+        >
           <div className="w-full flex flex-col mt-5">
             <label htmlFor="fullname" className="text-[25px] pb-1">
               Full Name
@@ -19,7 +47,7 @@ export const ContactForm = () => {
             <input
               type="text"
               id="fullname"
-              name="fullname"
+              name="user_fullname"
               className="p-[0.5em] rounded-lg text-black font-bold text-[23px]"
               placeholder="Enter your full name"
             />
@@ -31,7 +59,7 @@ export const ContactForm = () => {
             <input
               id="email"
               type="email"
-              name="email"
+              name="user_email"
               className="p-[0.5em] rounded-lg text-black font-bold text-[23px]"
               placeholder="Enter your email"
             />
@@ -48,7 +76,10 @@ export const ContactForm = () => {
             ></textarea>
           </div>
           <div className="w-full flex justify-center items-center flex-col mt-5">
-            <button className="w-[200px] h-[50px] bg-[#ffffff4d] rounded-lg icon-container">
+            <button
+              type="submit"
+              className="w-[200px] h-[50px] bg-[#ffffff4d] rounded-lg icon-container"
+            >
               <span className="text-2xl">SEND</span>
             </button>
           </div>
